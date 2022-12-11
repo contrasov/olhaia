@@ -1,0 +1,10 @@
+--------------------------------------------
+Espécie: a
+Fotossintese: sim
+Habitat: terreno
+Ciclo: ddd
+Ameaça: 1
+Filo: sss
+Talosas: 1
+Folhosas: 0
+--------------------------------------------

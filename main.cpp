@@ -1,9 +1,11 @@
 #include "Classes.hpp"
 using namespace std;
 
-int main() {
+int main()
+{
   Jardim *jardim = new Jardim();
-  while (true) {
+  while (true)
+  {
     int opcao;
     cout << "--------------------------" << endl;
     cout << "[1]Cadatrar              " << endl;
@@ -16,13 +18,15 @@ int main() {
     cout << "--------------------------" << endl;
     cin >> opcao;
 
-    if (opcao == 1) {
+    if (opcao == 1)
+    {
       int escolha;
       cout << "Cadastrar Briofitas[0], Pteridofitas[1], Angiospermas[2], "
               "Gimnospermas[3]"
            << endl;
       cin >> escolha;
-      if (escolha == 0) { // Briofitas
+      if (escolha == 0)
+      { // Briofitas
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -59,8 +63,9 @@ int main() {
         plantinha0->setFolhosas(Folhosas);
 
         jardim->adicionar(plantinha0);
-
-      } else if (escolha == 1) { // Pteriodofitas
+      }
+      else if (escolha == 1)
+      { // Pteridofitas
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -69,7 +74,7 @@ int main() {
         string FiloPterio;
         string Esporos;
 
-        Pteriodofitas *plantinha1 = new Pteriodofitas();
+        Pteridofitas *plantinha1 = new Pteridofitas();
         cout << "Digite Especie: " << endl;
         cin >> Especie;
         plantinha1->setEspecie(Especie);
@@ -93,8 +98,9 @@ int main() {
         plantinha1->setEsporos(Esporos);
 
         jardim->adicionar(plantinha1);
-
-      } else if (escolha == 2) { // Angiospermas
+      }
+      else if (escolha == 2)
+      { // Angiospermas
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -127,8 +133,9 @@ int main() {
         plantinha2->setFrutos(Frutos);
 
         jardim->adicionar(plantinha2);
-
-      } else if (escolha == 3) { // Gimnospermas
+      }
+      else if (escolha == 3)
+      { // Gimnospermas
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -157,29 +164,54 @@ int main() {
 
         jardim->adicionar(plantinha3);
       }
-    } else if (opcao == 2) {
+    }
+    else if (opcao == 2)
+    {
       int escolha2;
       cout << "Qual você quer Exibir?: Briofitas[0], Pteridofitas[1], "
               "Angiospermas[2], Gimnospermas[3]"
            << endl;
       cin >> escolha2;
-      if (escolha2 == 0) {
+      if (escolha2 == 0)
+      {
         cout << "\n\n";
         cout << "BRIOFITAS \n\n";
         jardim->mostrar(0);
-      } else if (escolha2 == 1) {
+      }
+      else if (escolha2 == 1)
+      {
         cout << "\n\n";
         cout << "PTERIDOFITAS \n\n";
         jardim->mostrar(1);
-      } else if (escolha2 == 2) {
+      }
+      else if (escolha2 == 2)
+      {
         cout << "\n\n";
         cout << "ANGIOSPERMAS \n\n";
         jardim->mostrar(2);
-      } else if (escolha2 == 3) {
+      }
+      else if (escolha2 == 3)
+      {
         cout << "\n\n";
         cout << "GIMNOSPERMAS \n\n";
         jardim->mostrar(3);
       }
+    }
+    else if (opcao == 4)
+    {
+      jardim->gerarRelatorioBriofitas();
+    }
+    else if (opcao == 5)
+    {
+      jardim->gerarRelatorioPteridofitas();
+    }
+    else if (opcao == 6)
+    {
+      jardim->gerarRelatoriAngiospermas();
+    }
+    else if (opcao == 7)
+    {
+      jardim->gerarRelatorioGimnospermas();
     }
   }
   return 0;

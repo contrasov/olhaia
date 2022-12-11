@@ -8,11 +8,11 @@ private:
   vector<Briofitas *> jardimbriofitas;
   vector<Gimnospermas *> jardimgimnospermas;
   vector<Angiospermas *> jardimangiospermas;
-  vector<Pteriodofitas *> jardimpteridofitas;
+  vector<Pteridofitas *> jardimpteridofitas;
 
 public:
   Jardim();
-  void adicionar(Pteriodofitas *planta);
+  void adicionar(Pteridofitas *planta);
   void adicionar(Briofitas *planta);
   void adicionar(Gimnospermas *planta);
   void adicionar(Angiospermas *planta);
@@ -20,7 +20,7 @@ public:
 
 Jardim::Jardim() {}
 
-void Jardim::adicionar(Pteriodofitas *planta){
+void Jardim::adicionar(Pteridofitas *planta){
   jardimpteridofitas.push_back(planta);
 }
 void Jardim::adicionar(Briofitas *planta) { 
