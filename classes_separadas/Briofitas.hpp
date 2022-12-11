@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Planta.hpp"
 using namespace std;
 
 class Briofitas : public Planta {

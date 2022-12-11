@@ -1,7 +1,4 @@
-#include "Angiospermas.hpp"
-#include "Briofitas.hpp"
-#include "Gimnospermas.hpp"
-#include "Pteridofitas.hpp"
+#include "Classes.hpp"
 #include <iostream>
 #include <vector>
 using namespace std;
