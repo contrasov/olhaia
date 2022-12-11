@@ -8,25 +8,30 @@ int main()
   {
     int opcao;
     cout << "--------------------------" << endl;
-    cout << "[1]Cadatrar              " << endl;
-    cout << "[2]Exibir                " << endl;
-    cout << "[3]Guardar               " << endl;
-    cout << "[4]Relatório p/ Briofitas " << endl;
-    cout << "[5]Relatório p/ Pteridofitas " << endl;
-    cout << "[6]Relatório p/ Angiospermas " << endl;
-    cout << "[7]Relatório p/ Gimnospermas " << endl;
+    cout << "[1] - Cadatrar              " << endl;
+    cout << "[2] - Exibir                " << endl;
+    cout << "[3] - Guardar               " << endl;
+    cout << "[4] - Relatório p/ Briofitas " << endl;
+    cout << "[5] - Relatório p/ Pteridofitas " << endl;
+    cout << "[6] - Relatório p/ Angiospermas " << endl;
+    cout << "[7] - Relatório p/ Gimnospermas " << endl;
     cout << "--------------------------" << endl;
     cin >> opcao;
 
+    // CADASTRAR
     if (opcao == 1)
     {
       int escolha;
-      cout << "Cadastrar Briofitas[0], Pteridofitas[1], Angiospermas[2], "
-              "Gimnospermas[3]"
-           << endl;
+      cout << "Cadastrar:\n"
+           << "Briofitas[0]\n"
+           << "Pteridofitas[1]\n"
+           << "Angiospermas[2]\n"
+           << "Gimnospermas[3]\n";
       cin >> escolha;
+
+      // Cadastrar Briofitas
       if (escolha == 0)
-      { // Briofitas
+      {
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -64,8 +69,9 @@ int main()
 
         jardim->adicionar(plantinha0);
       }
+      // Cadastrar Pteridofitas
       else if (escolha == 1)
-      { // Pteridofitas
+      {
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -99,8 +105,9 @@ int main()
 
         jardim->adicionar(plantinha1);
       }
+      // Cadastrar Angiospermas
       else if (escolha == 2)
-      { // Angiospermas
+      {
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -134,8 +141,9 @@ int main()
 
         jardim->adicionar(plantinha2);
       }
+      // Cadastrar Gimnospermas
       else if (escolha == 3)
-      { // Gimnospermas
+      {
         string Especie;
         string Fotossintese;
         string Habitat;
@@ -165,6 +173,8 @@ int main()
         jardim->adicionar(plantinha3);
       }
     }
+
+    // EXIBIR
     else if (opcao == 2)
     {
       int escolha2;
@@ -197,6 +207,7 @@ int main()
         jardim->mostrar(3);
       }
     }
+    // RELATORIOS
     else if (opcao == 4)
     {
       jardim->gerarRelatorioBriofitas();

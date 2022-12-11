@@ -96,7 +96,7 @@ void Gimnospermas::Exibir()
   cout << "Espécie: " << this->getEspecie() << endl;
   cout << "Fotossintese: " << this->getFotossintese() << endl;
   cout << "Habitat: " << this->getHabitat() << endl;
-  cout << "Ciclo: " << this->getCiclo() << endl;
+  cout << "Ciclo Reprodutivo: " << this->getCiclo() << endl;
   cout << "Ameaça: " << this->getAmeaca() << endl;
   cout << "Filo: " << this->getFilosGimnos() << endl;
   cout << "--------------------------------------------" << endl;
@@ -105,7 +105,7 @@ void Gimnospermas::Exibir()
 string Gimnospermas::getFilosGimnos() { return this->FilosGimnos; }
 void Gimnospermas::setFilosGimnos(string Filo) { this->FilosGimnos = Filo; }
 
-/****************************PTERIODOFITAS**********************************************/
+/****************************PTERIDOFITAS**********************************************/
 class Pteridofitas : public Planta
 {
 private:
@@ -193,7 +193,7 @@ void Angiospermas::setFilosAngios(string Filo) { this->FiloAngios = Filo; }
 string Angiospermas::getFrutos() { return this->Frutos; }
 void Angiospermas::setFrutos(string Fruto) { this->Frutos = Fruto; }
 
-// BRIOFITAS
+/****************************BRIOFITAS**********************************************/
 class Briofitas : public Planta
 {
 private:
