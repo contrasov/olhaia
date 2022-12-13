@@ -1,8 +1,0 @@
---------------------------------------------
-Espécie: eee
-Fotossintese: sim
-Habitat: aaa
-Ciclo: aqq
-Ameaça: 1
-Filo: Vazio
---------------------------------------------

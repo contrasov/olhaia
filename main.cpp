@@ -10,11 +10,10 @@ int main()
     cout << "--------------------------" << endl;
     cout << "[1] - Cadatrar              " << endl;
     cout << "[2] - Exibir                " << endl;
-    cout << "[3] - Guardar               " << endl;
-    cout << "[4] - Relatório p/ Briofitas " << endl;
-    cout << "[5] - Relatório p/ Pteridofitas " << endl;
-    cout << "[6] - Relatório p/ Angiospermas " << endl;
-    cout << "[7] - Relatório p/ Gimnospermas " << endl;
+    cout << "[3] - Relatório p/ Briofitas " << endl;
+    cout << "[4] - Relatório p/ Pteridofitas " << endl;
+    cout << "[5] - Relatório p/ Angiospermas " << endl;
+    cout << "[6] - Relatório p/ Gimnospermas " << endl;
     cout << "--------------------------" << endl;
     cin >> opcao;
 
@@ -43,26 +42,38 @@ int main()
 
         Briofitas *plantinha0 = new Briofitas();
         cout << "Digite Especie: " << endl;
-        cin >> Especie;
+        cin.ignore();
+        getline(cin, Especie);
         plantinha0->setEspecie(Especie);
+
         cout << "Esse tipo de planta realiza Fotossintese?: " << endl;
-        cin >> Fotossintese;
+        cin.ignore();
+        getline(cin, Fotossintese);
         plantinha0->setFotossintese(Fotossintese);
+
         cout << "Qual o Habitat?: " << endl;
-        cin >> Habitat;
+        cin.ignore();
+        getline(cin, Fotossintese);
         plantinha0->setHabitat(Habitat);
+
         cout << "Qual o Ciclo da Planta?: " << endl;
-        cin >> Ciclo;
+        cin.ignore();
+        getline(cin, Ciclo);
         plantinha0->setCiclo(Ciclo);
+
         cout << "Qual o seu Filo?:  " << endl;
-        cin >> FilosBrio;
+        cin.ignore();
+        getline(cin, FilosBrio);
         plantinha0->setFilosBrio(FilosBrio);
+
         cout << "Está ameçada? Sim[1] ou Não[0]  " << endl;
         cin >> Ameaca;
         plantinha0->setAmeaca(Ameaca);
+
         cout << "Está Briofita é Talosas? Sim[1] ou Não[0]  " << endl;
         cin >> Talosas;
         plantinha0->setTalosas(Talosas);
+
         cout << "Está Briofita é Folhosas? Sim[1] ou Não[0]: " << endl;
         cin >> Folhosas;
         plantinha0->setFolhosas(Folhosas);
@@ -208,19 +219,19 @@ int main()
       }
     }
     // RELATORIOS
-    else if (opcao == 4)
+    else if (opcao == 3)
     {
       jardim->gerarRelatorioBriofitas();
     }
-    else if (opcao == 5)
+    else if (opcao == 4)
     {
       jardim->gerarRelatorioPteridofitas();
     }
-    else if (opcao == 6)
+    else if (opcao == 5)
     {
       jardim->gerarRelatoriAngiospermas();
     }
-    else if (opcao == 7)
+    else if (opcao == 6)
     {
       jardim->gerarRelatorioGimnospermas();
     }

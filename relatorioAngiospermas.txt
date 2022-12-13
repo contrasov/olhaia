@@ -1,9 +1,0 @@
---------------------------------------------
-Espécie: d
-Fotossintese: nao
-Habitat: quinta
-Ciclo: dddd
-Ameaça: 1
-Filo: ooo
-Fruto: ccc
---------------------------------------------

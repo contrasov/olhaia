@@ -31,6 +31,8 @@ public:
   void setAmeaca(bool Ameaca);
 };
 
+/****************************CONSTRUTOR DE PLANTA**********************************************/
+
 Planta::Planta(string Especie, string Fotossintese, string Habitat,
                string Ciclo, bool Ameaca)
 {
@@ -40,6 +42,7 @@ Planta::Planta(string Especie, string Fotossintese, string Habitat,
   this->setCiclo(Ciclo);
   this->setAmeaca(Ameaca);
 }
+/****************************GETS E SETS DE PLANTA**********************************************/
 
 string Planta::getEspecie() { return this->Especie; }
 void Planta::setEspecie(string Especie) { this->Especie = Especie; }
@@ -59,6 +62,8 @@ void Planta::setCiclo(string Ciclo) { this->Ciclo = Ciclo; }
 bool Planta::getAmeaca() { return this->Ameaca; }
 void Planta::setAmeaca(bool Ameaca) { this->Ameaca = Ameaca; }
 
+/****************************FUNÇÃO EXIBIR**********************************************/
+
 void Planta::Exibir()
 {
   cout << "--------------------------------------------" << endl;
@@ -69,6 +74,8 @@ void Planta::Exibir()
   cout << "Ameaça: " << this->getAmeaca() << endl;
   cout << "--------------------------------------------" << endl;
 }
+/***************************************************************************************/
+
 
 /****************************GIMNOSPERMAS**********************************************/
 class Gimnospermas : public Planta
@@ -84,12 +91,13 @@ public:
   string getFilosGimnos();
   void setFilosGimnos(string Filo);
 };
-
+/****************************CONSTRUTROR GIMNOSPERMAS**********************************************/
 Gimnospermas::Gimnospermas(string FilosGimnos)
 {
   this->setFilosGimnos(FilosGimnos);
 }
 
+/****************************FUNÇÃO EXIBIR GIMNOSPERMAS**********************************************/
 void Gimnospermas::Exibir()
 {
   cout << "--------------------------------------------" << endl;
@@ -102,10 +110,13 @@ void Gimnospermas::Exibir()
   cout << "--------------------------------------------" << endl;
 }
 
+/****************************GET E SETS GIMNOSPERMAS**********************************************/
 string Gimnospermas::getFilosGimnos() { return this->FilosGimnos; }
 void Gimnospermas::setFilosGimnos(string Filo) { this->FilosGimnos = Filo; }
+/*************************************************************************************************/
 
-/****************************PTERIDOFITAS**********************************************/
+
+/****************************PTERIDOFITAS***********************************************************/
 class Pteridofitas : public Planta
 {
 private:
@@ -122,13 +133,13 @@ public:
   string getEsporos();
   void setEsporos(string Esporos);
 };
-
+/****************************CONSTRUTOR PTERIDOFITAS**********************************************/
 Pteridofitas::Pteridofitas(string FiloPterio, string Esporos)
 {
   this->setFiloPterio(FiloPterio);
   this->setEsporos(Esporos);
 }
-
+/****************************FUNÇÃO EXIBIR PTERIDOFITAS*******************************************/
 void Pteridofitas::Exibir()
 {
   cout << "--------------------------------------------" << endl;
@@ -141,6 +152,7 @@ void Pteridofitas::Exibir()
   cout << "Esporos: " << this->getEsporos() << endl;
   cout << "--------------------------------------------" << endl;
 }
+/****************************GETS E SETS PTERIDOFITAS**********************************************/
 
 string Pteridofitas::getFiloPterio() { return this->FiloPterio; }
 
@@ -149,6 +161,8 @@ void Pteridofitas::setFiloPterio(string Filo) { this->FiloPterio = Filo; }
 string Pteridofitas::getEsporos() { return this->Esporos; }
 
 void Pteridofitas::setEsporos(string Esporos) { this->Esporos = Esporos; }
+/*************************************************************************************************/
+
 
 /****************************ANGIOSPERMAS**********************************************/
 class Angiospermas : public Planta
@@ -159,7 +173,7 @@ private:
 
 public:
   // Construtor
-  Angiospermas(string FilosAngios = "Vazio", string Frutos = "Vazio");
+  Angiospermas(string FiloAngios = "Vazio", string Frutos = "Vazio");
 
   void Exibir() override;
   string getFilosAngios();
@@ -167,12 +181,14 @@ public:
   string getFrutos();
   void setFrutos(string Fruto);
 };
-
+/****************************CONSTRUTOR ANGIOSPERMAS**********************************************/
 Angiospermas::Angiospermas(string FiloAngios, string Frutos)
 {
   this->setFilosAngios(FiloAngios);
   this->setFrutos(Frutos);
 }
+
+/****************************FUNÇÃO EXIBIR ANGIOSPERMAS**********************************************/
 
 void Angiospermas::Exibir()
 {
@@ -187,11 +203,15 @@ void Angiospermas::Exibir()
   cout << "--------------------------------------------" << endl;
 }
 
+/****************************GETS E SETS ANGIOSPERMAS**********************************************/
+
 string Angiospermas::getFilosAngios() { return this->FiloAngios; }
 void Angiospermas::setFilosAngios(string Filo) { this->FiloAngios = Filo; }
 
 string Angiospermas::getFrutos() { return this->Frutos; }
 void Angiospermas::setFrutos(string Fruto) { this->Frutos = Fruto; }
+/*************************************************************************************************/
+
 
 /****************************BRIOFITAS**********************************************/
 class Briofitas : public Planta
@@ -213,13 +233,15 @@ public:
   bool getFolhosas();
   void setFolhosas(bool Folhosas);
 };
-
+/****************************CONSTRUTOR BRIOFITAS**********************************************/
 Briofitas::Briofitas(string FilosBrio, bool Talosas, bool Folhosas)
 {
   this->setFilosBrio(FilosBrio);
   this->setTalosas(Talosas);
   this->setFolhosas(Folhosas);
 }
+
+/****************************FUNÇÃO EXIBIR BRIOFITAS**********************************************/
 
 void Briofitas::Exibir()
 {
@@ -235,6 +257,8 @@ void Briofitas::Exibir()
   cout << "--------------------------------------------" << endl;
 }
 
+/****************************GETS E SETS BRIOFITAS**********************************************/
+
 string Briofitas::getFilosBrio() { return this->FilosBrio; }
 void Briofitas::setFilosBrio(string Filo) { this->FilosBrio = Filo; }
 
@@ -243,7 +267,11 @@ void Briofitas::setTalosas(bool Talosas) { this->Talosas = Talosas; }
 
 bool Briofitas::getFolhosas() { return this->Folhosas; }
 void Briofitas::setFolhosas(bool Folhosas) { this->Folhosas = Folhosas; }
+/************************************************************************************************/
 
+
+/****************************JARDIM**********************************************/
+//ARMAZENAR VÁRIOS OBJETOS DAS CLASSES DERIVADAS EM UM VETOR
 class Jardim
 {
 private:
@@ -269,13 +297,15 @@ public:
 
 Jardim::Jardim() {}
 
-/****************************ADICIONAR**********************************************/
-
+/****************************ADICIONAR AS PLANTAS NOS SEUS RESPECTIVOS VETORES**********************************************/
 void Jardim::adicionar(Pteridofitas *planta)
 {
   jardimpteridofitas.push_back(planta);
 }
-void Jardim::adicionar(Briofitas *planta) { jardimbriofitas.push_back(planta); }
+void Jardim::adicionar(Briofitas *planta) 
+{ 
+  jardimbriofitas.push_back(planta); 
+}
 void Jardim::adicionar(Gimnospermas *planta)
 {
   jardimgimnospermas.push_back(planta);
@@ -284,6 +314,7 @@ void Jardim::adicionar(Angiospermas *planta)
 {
   jardimangiospermas.push_back(planta);
 }
+
 /****************************MOSTRAR**********************************************/
 void Jardim::mostrar(int tipo)
 {
@@ -326,14 +357,14 @@ void Jardim::gerarRelatoriAngiospermas()
 
   for (int i = 0; i < jardimangiospermas.size(); i++)
   {
-    arq << "--------------------------------------------" << endl;
-    arq << "Espécie: " << jardimangiospermas[i]->getEspecie() << endl;
+    arq << "--------------------------------------------" << endl; 
+    arq << "Espécie: "      << jardimangiospermas[i]->getEspecie()      << endl;
     arq << "Fotossintese: " << jardimangiospermas[i]->getFotossintese() << endl;
-    arq << "Habitat: " << jardimangiospermas[i]->getHabitat() << endl;
-    arq << "Ciclo: " << jardimangiospermas[i]->getCiclo() << endl;
-    arq << "Ameaça: " << jardimangiospermas[i]->getAmeaca() << endl;
-    arq << "Filo: " << jardimangiospermas[i]->getFilosAngios() << endl;
-    arq << "Fruto: " << jardimangiospermas[i]->getFrutos() << endl;
+    arq << "Habitat: "      << jardimangiospermas[i]->getHabitat()      << endl;
+    arq << "Ciclo: "        << jardimangiospermas[i]->getCiclo()        << endl;
+    arq << "Ameaça: "       << jardimangiospermas[i]->getAmeaca()       << endl;
+    arq << "Filo: "         << jardimangiospermas[i]->getFilosAngios()  << endl;
+    arq << "Fruto: "        << jardimangiospermas[i]->getFrutos()       << endl;
     arq << "--------------------------------------------" << endl;
   }
   arq.close();
@@ -354,10 +385,10 @@ void Jardim::gerarRelatorioBriofitas()
     arq << "Fotossintese: " << jardimbriofitas[i]->getFotossintese() << endl;
     arq << "Habitat: " << jardimbriofitas[i]->getHabitat() << endl;
     arq << "Ciclo: " << jardimbriofitas[i]->getCiclo() << endl;
-    arq << "Ameaça: " << jardimbriofitas[i]->getAmeaca() << endl;
+    arq << "Ameaçada  1-SIM / 0-NÃO: " << jardimbriofitas[i]->getAmeaca() << endl;
     arq << "Filo: " << jardimbriofitas[i]->getFilosBrio() << endl;
-    arq << "Talosas: " << jardimbriofitas[i]->getTalosas() << endl;
-    arq << "Folhosas: " << jardimbriofitas[i]->getFolhosas() << endl;
+    arq << "É Talosa  1-SIM / 0-NÃO: " << jardimbriofitas[i]->getTalosas() << endl;
+    arq << "É Folhosa 1-SIM / 0-NÃO: " << jardimbriofitas[i]->getFolhosas() << endl;
     arq << "--------------------------------------------" << endl;
   }
   arq.close();
@@ -378,7 +409,7 @@ void Jardim::gerarRelatorioGimnospermas()
     arq << "Fotossintese: " << jardimgimnospermas[i]->getFotossintese() << endl;
     arq << "Habitat: " << jardimgimnospermas[i]->getHabitat() << endl;
     arq << "Ciclo: " << jardimgimnospermas[i]->getCiclo() << endl;
-    arq << "Ameaça: " << jardimgimnospermas[i]->getAmeaca() << endl;
+    arq << "Ameaçada  1-SIM / 0-NÃO: " << jardimgimnospermas[i]->getAmeaca() << endl;
     arq << "Filo: " << jardimgimnospermas[i]->getFilosGimnos() << endl;
     arq << "--------------------------------------------" << endl;
   }
@@ -399,9 +430,9 @@ void Jardim::gerarRelatorioPteridofitas()
     arq << "Fotossintese: " << jardimpteridofitas[i]->getFotossintese() << endl;
     arq << "Habitat: " << jardimpteridofitas[i]->getHabitat() << endl;
     arq << "Ciclo: " << jardimpteridofitas[i]->getCiclo() << endl;
-    arq << "Ameaça: " << jardimpteridofitas[i]->getAmeaca() << endl;
+    arq << "Ameaçada  1-SIM / 0-NÃO: " << jardimpteridofitas[i]->getAmeaca() << endl;
     arq << "Filo: " << jardimpteridofitas[i]->getFiloPterio() << endl;
-    arq << "Esporos: " << jardimpteridofitas[i]->getEsporos() << endl;
+    arq << "Esporos  1-SIM / 0-NÃO: " << jardimpteridofitas[i]->getEsporos() << endl;
     arq << "--------------------------------------------" << endl;
   }
   arq.close();
